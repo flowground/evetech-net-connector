@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "fleet_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "new_settings object",
+            "properties": {
+                "is_free_move": {
+                    "description": "Should free-move be enabled in the fleet",
+                    "title": "put_fleets_fleet_id_is_free_move",
+                    "type": "boolean"
+                },
+                "motd": {
+                    "description": "New fleet MOTD in CCP flavoured HTML",
+                    "title": "put_fleets_fleet_id_motd",
+                    "type": "string"
+                }
+            },
+            "title": "put_fleets_fleet_id_new_settings",
+            "type": "object"
+        }
+    }
+}

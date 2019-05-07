@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "target_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "token": {
+            "type": "string"
+        }
+    }
+}

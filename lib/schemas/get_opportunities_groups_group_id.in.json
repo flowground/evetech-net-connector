@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "group_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "Accept_Language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

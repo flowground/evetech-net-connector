@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "fleet_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "member_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "movement object",
+            "properties": {
+                "role": {
+                    "description": "If a character is moved to the `fleet_commander` role, neither `wing_id` or `squad_id` should be specified. If a character is moved to the `wing_commander` role, only `wing_id` should be specified. If a character is moved to the `squad_commander` role, both `wing_id` and `squad_id` should be specified. If a character is moved to the `squad_member` role, both `wing_id` and `squad_id` should be specified.",
+                    "enum": [
+                        "fleet_commander",
+                        "wing_commander",
+                        "squad_commander",
+                        "squad_member"
+                    ],
+                    "title": "put_fleets_fleet_id_members_member_id_role",
+                    "type": "string"
+                },
+                "squad_id": {
+                    "description": "squad_id integer",
+                    "format": "int64",
+                    "minimum": 0,
+                    "title": "put_fleets_fleet_id_members_member_id_squad_id",
+                    "type": "integer"
+                },
+                "wing_id": {
+                    "description": "wing_id integer",
+                    "format": "int64",
+                    "minimum": 0,
+                    "title": "put_fleets_fleet_id_members_member_id_wing_id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "role"
+            ],
+            "title": "put_fleets_fleet_id_members_member_id_movement",
+            "type": "object"
+        }
+    }
+}

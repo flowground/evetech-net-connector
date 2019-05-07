@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "corporation_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "page": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "default": 1
+        },
+        "token": {
+            "type": "string"
+        },
+        "Accept_Language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "token": {
+            "type": "string"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

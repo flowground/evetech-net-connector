@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "corporation_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "division": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "maximum": 7
+        },
+        "from_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "token": {
+            "type": "string"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

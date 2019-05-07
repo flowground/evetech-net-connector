@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "contract_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "page": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "default": 1
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

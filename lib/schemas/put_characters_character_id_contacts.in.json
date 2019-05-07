@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "label_ids": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "format": "int64",
+                "type": "integer"
+            },
+            "maxItems": 63
+        },
+        "standing": {
+            "required": true,
+            "type": "number",
+            "format": "float",
+            "minimum": -10,
+            "maximum": 10
+        },
+        "token": {
+            "type": "string"
+        },
+        "watched": {
+            "required": false,
+            "type": "boolean",
+            "default": false
+        },
+        "requestBody": {
+            "description": "contact_ids array",
+            "items": {
+                "description": "ID of the contact to edit",
+                "format": "int32",
+                "title": "put_characters_character_id_contacts_contact_id",
+                "type": "integer"
+            },
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "put_characters_character_id_contacts_contact_ids",
+            "type": "array"
+        }
+    }
+}

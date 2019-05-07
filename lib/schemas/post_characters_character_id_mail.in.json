@@ -1,0 +1,88 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "mail object",
+            "properties": {
+                "approved_cost": {
+                    "default": 0,
+                    "description": "approved_cost integer",
+                    "format": "int64",
+                    "title": "post_characters_character_id_mail_approved_cost",
+                    "type": "integer"
+                },
+                "body": {
+                    "description": "body string",
+                    "maxLength": 10000,
+                    "title": "post_characters_character_id_mail_body",
+                    "type": "string"
+                },
+                "recipients": {
+                    "description": "recipients array",
+                    "items": {
+                        "description": "recipient object",
+                        "properties": {
+                            "recipient_id": {
+                                "description": "recipient_id integer",
+                                "format": "int32",
+                                "title": "post_characters_character_id_mail_recipient_id",
+                                "type": "integer"
+                            },
+                            "recipient_type": {
+                                "description": "recipient_type string",
+                                "enum": [
+                                    "alliance",
+                                    "character",
+                                    "corporation",
+                                    "mailing_list"
+                                ],
+                                "title": "post_characters_character_id_mail_recipient_type",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "recipient_type",
+                            "recipient_id"
+                        ],
+                        "title": "post_characters_character_id_mail_recipient",
+                        "type": "object"
+                    },
+                    "maxItems": 50,
+                    "minItems": 1,
+                    "title": "post_characters_character_id_mail_recipients",
+                    "type": "array"
+                },
+                "subject": {
+                    "description": "subject string",
+                    "maxLength": 1000,
+                    "title": "post_characters_character_id_mail_subject",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "recipients",
+                "subject",
+                "body"
+            ],
+            "title": "post_characters_character_id_mail_mail",
+            "type": "object"
+        }
+    }
+}

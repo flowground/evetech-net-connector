@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "labels": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "format": "int32",
+                "minimum": 0,
+                "type": "integer"
+            },
+            "minItems": 1,
+            "maxItems": 25,
+            "uniqueItems": true
+        },
+        "last_mail_id": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "token": {
+            "type": "string"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "add_to_beginning": {
+            "required": true,
+            "type": "boolean",
+            "default": false
+        },
+        "clear_other_waypoints": {
+            "required": true,
+            "type": "boolean",
+            "default": false
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "destination_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "token": {
+            "type": "string"
+        }
+    }
+}

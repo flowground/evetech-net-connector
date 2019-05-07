@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "corporation_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "observer_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "page": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "default": 1
+        },
+        "token": {
+            "type": "string"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

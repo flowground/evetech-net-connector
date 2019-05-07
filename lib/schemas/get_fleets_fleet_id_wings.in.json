@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "fleet_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "token": {
+            "type": "string"
+        },
+        "Accept_Language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

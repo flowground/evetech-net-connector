@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

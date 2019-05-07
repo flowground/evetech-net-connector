@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "alliance_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

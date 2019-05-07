@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "Accept_Language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "fleet_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "invitation object",
+            "properties": {
+                "character_id": {
+                    "description": "The character you want to invite",
+                    "format": "int32",
+                    "title": "post_fleets_fleet_id_members_character_id",
+                    "type": "integer"
+                },
+                "role": {
+                    "description": "If a character is invited with the `fleet_commander` role, neither `wing_id` or `squad_id` should be specified. If a character is invited with the `wing_commander` role, only `wing_id` should be specified. If a character is invited with the `squad_commander` role, both `wing_id` and `squad_id` should be specified. If a character is invited with the `squad_member` role, `wing_id` and `squad_id` should either both be specified or not specified at all. If they aren’t specified, the invited character will join any squad with available positions.",
+                    "enum": [
+                        "fleet_commander",
+                        "wing_commander",
+                        "squad_commander",
+                        "squad_member"
+                    ],
+                    "title": "post_fleets_fleet_id_members_role",
+                    "type": "string"
+                },
+                "squad_id": {
+                    "description": "squad_id integer",
+                    "format": "int64",
+                    "minimum": 0,
+                    "title": "post_fleets_fleet_id_members_squad_id",
+                    "type": "integer"
+                },
+                "wing_id": {
+                    "description": "wing_id integer",
+                    "format": "int64",
+                    "minimum": 0,
+                    "title": "post_fleets_fleet_id_members_wing_id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "character_id",
+                "role"
+            ],
+            "title": "post_fleets_fleet_id_members_invitation",
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "fitting object",
+            "properties": {
+                "description": {
+                    "description": "description string",
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "title": "post_characters_character_id_fittings_description",
+                    "type": "string"
+                },
+                "items": {
+                    "description": "items array",
+                    "items": {
+                        "description": "item object",
+                        "properties": {
+                            "flag": {
+                                "description": "flag integer",
+                                "format": "int32",
+                                "title": "post_characters_character_id_fittings_flag",
+                                "type": "integer"
+                            },
+                            "quantity": {
+                                "description": "quantity integer",
+                                "format": "int32",
+                                "title": "post_characters_character_id_fittings_quantity",
+                                "type": "integer"
+                            },
+                            "type_id": {
+                                "description": "type_id integer",
+                                "format": "int32",
+                                "title": "post_characters_character_id_fittings_type_id",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "type_id",
+                            "flag",
+                            "quantity"
+                        ],
+                        "title": "post_characters_character_id_fittings_item",
+                        "type": "object"
+                    },
+                    "maxItems": 255,
+                    "minItems": 1,
+                    "title": "post_characters_character_id_fittings_items",
+                    "type": "array"
+                },
+                "name": {
+                    "description": "name string",
+                    "maxLength": 50,
+                    "minLength": 1,
+                    "title": "post_characters_character_id_fittings_name",
+                    "type": "string"
+                },
+                "ship_type_id": {
+                    "description": "ship_type_id integer",
+                    "format": "int32",
+                    "title": "post_characters_character_id_fittings_ship_type_id",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "name",
+                "description",
+                "ship_type_id",
+                "items"
+            ],
+            "title": "post_characters_character_id_fittings_fitting",
+            "type": "object"
+        }
+    }
+}

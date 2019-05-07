@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "requestBody": {
+            "description": "names array",
+            "example": [
+                "CCP Zoetrope"
+            ],
+            "items": {
+                "description": "name string",
+                "maxLength": 100,
+                "minLength": 1,
+                "title": "post_universe_ids_name",
+                "type": "string"
+            },
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "post_universe_ids_names",
+            "type": "array",
+            "uniqueItems": true
+        },
+        "Accept_Language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        }
+    }
+}

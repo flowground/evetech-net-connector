@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "categories": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "agent",
+                    "alliance",
+                    "character",
+                    "constellation",
+                    "corporation",
+                    "faction",
+                    "inventory_type",
+                    "region",
+                    "solar_system",
+                    "station",
+                    "structure"
+                ],
+                "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 11,
+            "uniqueItems": true
+        },
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "search": {
+            "required": true,
+            "type": "string",
+            "minLength": 3
+        },
+        "strict": {
+            "type": "boolean",
+            "default": false
+        },
+        "token": {
+            "type": "string"
+        },
+        "Accept_Language": {
+            "type": "string",
+            "enum": [
+                "de",
+                "en-us",
+                "fr",
+                "ja",
+                "ru",
+                "zh"
+            ],
+            "default": "en-us"
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}

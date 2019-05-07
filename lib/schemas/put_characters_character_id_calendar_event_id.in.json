@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "event_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "response object",
+            "properties": {
+                "response": {
+                    "description": "response string",
+                    "enum": [
+                        "accepted",
+                        "declined",
+                        "tentative"
+                    ],
+                    "title": "put_characters_character_id_calendar_event_id_response_response",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "response"
+            ],
+            "title": "put_characters_character_id_calendar_event_id_response",
+            "type": "object"
+        }
+    }
+}

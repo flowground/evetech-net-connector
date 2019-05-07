@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "requestBody": {
+            "description": "ids array",
+            "example": [
+                95465499,
+                30000142
+            ],
+            "items": {
+                "description": "id integer",
+                "format": "int32",
+                "title": "post_universe_names_id",
+                "type": "integer"
+            },
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "post_universe_names_ids",
+            "type": "array",
+            "uniqueItems": true
+        }
+    }
+}

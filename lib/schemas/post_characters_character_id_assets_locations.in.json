@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "character_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1
+        },
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "item_ids array",
+            "items": {
+                "description": "item_id integer",
+                "format": "int64",
+                "title": "post_characters_character_id_assets_locations_item_id",
+                "type": "integer"
+            },
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "post_characters_character_id_assets_locations_item_ids",
+            "type": "array",
+            "uniqueItems": true
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "fleet_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "token": {
+            "type": "string"
+        },
+        "wing_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "requestBody": {
+            "description": "naming object",
+            "properties": {
+                "name": {
+                    "description": "name string",
+                    "maxLength": 10,
+                    "title": "put_fleets_fleet_id_wings_wing_id_name",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "put_fleets_fleet_id_wings_wing_id_naming",
+            "type": "object"
+        }
+    }
+}

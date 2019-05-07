@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "datasource": {
+            "type": "string",
+            "enum": [
+                "tranquility",
+                "singularity"
+            ],
+            "default": "tranquility"
+        },
+        "filter": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "market",
+                "manufacturing_basic"
+            ]
+        },
+        "If_None_Match": {
+            "type": "string"
+        }
+    }
+}
